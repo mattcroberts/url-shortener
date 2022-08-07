@@ -1,15 +1,15 @@
 import { FC } from "react";
 import { Form } from "../../components/Form/Form";
-import { Header } from "../../components/Header/Header";
+import { PageWrapper } from "../../components/PageWrapper/PageWrapper";
 import "./Home.css";
 
 export const HomePage: FC = () => {
   return (
-    <>
-      <Header />
+    <PageWrapper>
       <div className="home-page">
+        <p>Enter a URL in the box below to get started.</p>
         <Form />
       </div>
-    </>
+    </PageWrapper>
   );
 };
