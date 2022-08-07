@@ -1,0 +1,17 @@
+{
+  "name": "primarybid-test",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "lerna": "^5.3.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev",
+    "test": "lerna run --stream test",
+    "lint": "lerna run lint"
+  }
+}

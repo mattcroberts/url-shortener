@@ -1,0 +1,7 @@
+query GetUrl($id: ID!) {
+  url(id: $id) {
+    id
+    originalUrl
+    shortUrl
+  }
+}

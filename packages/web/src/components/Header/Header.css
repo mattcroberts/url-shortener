@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: baseline;
+  padding: 1rem;
+  background-color: #c2255c;
+}
+
+.header h1 {
+  margin: 0 2rem 0 0;
+}
+
+.header a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+}

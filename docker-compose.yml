@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  api:
+    build:
+      context:  ./packages/api
+    ports:
+      - "4000:4000"
+    environment:
+      - MONGODB_URL=mongodb://mongodb_container:27017/urlshortener
+      - MONGO_USER=urlshortener
+      - MONGO_PASSWORD=urlshortener
+    depends_on:
+      - mongodb_container
+  web:
+    build:
+      context:  ./packages/web
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+  mongodb_container:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: urlshortener
+      MONGO_INITDB_ROOT_PASSWORD: urlshortener
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
