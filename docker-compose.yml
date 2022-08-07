@@ -2,7 +2,7 @@ version: '3.7'
 services:
   api:
     build:
-      context:  ./packages/api
+      context: ./packages/api
     ports:
       - "4000:4000"
     environment:
@@ -13,7 +13,7 @@ services:
       - mongodb_container
   web:
     build:
-      context:  ./packages/web
+      context: ./packages/web
     ports:
       - "8080:8080"
     depends_on:

@@ -16,6 +16,8 @@ Ideally this project would have an integration/E2E test.
 
 The short url generation relys on nanoid with a custom alphabet, if the same id gets genetated twice, there will be an error due to a mongo unique index restraint. This could be mitigated by having a lookup and retry mechanism. I haven't built this due to time constraints.
 
+For the docker build of both packages, it installs dependencies without a `yarn.lock`, this needs to be fixed and I've only left it this way due to lack of time. The problem is because the yarn workspace, there is a solution to this. I do not consider this acceptable.
+
 # Development
 
 1. Start a mongo DB instance
