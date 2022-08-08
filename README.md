@@ -20,7 +20,7 @@ For the docker build of both packages, it installs dependencies without a `yarn.
 
 # Development
 
-1. Start a mongo DB instance
+1. Start a mongo DB instance with `docker run -e MONGO_INITDB_ROOT_USERNAME=urlshortener -e MONGO_INITDB_ROOT_PASSWORD=urlshortener -p27017:27017 mongo:latest`
 2. In another terminal, at the root of this repo - run `yarn dev`. .env files in the packages/api and packages/web folder control the credentials and urls
 
 Unit tests and lint can be run via `yarn test` and `yarn lint` from each package directory.
